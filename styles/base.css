@@ -2,6 +2,8 @@
   --color-primary: #ff7b54;
   --color-text-primary: #fff;
   --font-family: "Inter", sans-serif;
+  --color-header-bg: #000; /* Changed to black */
+  --color-header-text: #fff;
 }
 * {
   margin: 0;
@@ -11,8 +13,24 @@
 header {
   display: flex;
   justify-content: space-between;
-
   align-items: center;
+  padding: 16px 32px;
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
+}
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary); /* Added accent color to logo */
+}
+header nav a {
+  color: var(--color-header-text);
+  margin-left: 24px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+header nav a:hover {
+  color: var(--color-primary);
 }
 
 body {
@@ -37,4 +55,30 @@ nav > ul {
   flex-direction: row;
   margin-inline-end: 36px;
   gap: 24px;
+}
+
+button {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+}
+
+.btn-primary img {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-secondary {
+  background-color: var(--color-header-bg);
+  color: var(--color-header-text);
 }
